@@ -1,0 +1,452 @@
+/* HOJA DE ESTILOS COMUNES */
+/* ATAJO COMENTARIO CONTROL CTRL+K+C */
+* {
+  margin: 0;
+  padding: 0; }
+
+/* VARIABLES PRINCIPALES */
+/* ESTILO DE HEADER */
+#logoContenedor {
+  display: flex;
+  height: 90px;
+  justify-content: center;
+  margin-top: 2px;
+  background-color: #212529; }
+
+#busqueda {
+  font-family: "MuseoModerno", cursive;
+  width: 70%;
+  height: 20px;
+  border-style: none none solid;
+  border-width: 1px 1px 1px;
+  border-color: #000 #000 rgba(143, 0, 179, 0.65);
+  border-radius: 0;
+  background-color: transparent;
+  color: #fff;
+  font-size: 12px;
+  line-height: 20px; }
+
+/* NAVEGADOR */
+ul {
+  font-family: "MuseoModerno", cursive;
+  align-items: center; }
+
+li:hover {
+  transform: scale(1.1, 1.1); }
+
+a {
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s; }
+
+a:hover {
+  color: blueviolet; }
+
+/* ESTILOS DE ICONOS */
+.searchA {
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  transition: all 0.5s; }
+
+.searchA:hover {
+  transform: scale(1.5, 1.5);
+  color: white; }
+
+/* ESTILO DE FOOTER SASS+BEM*/
+.footerP {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  background: #212529; }
+  .footerP__contenedorA {
+    width: 50%; }
+    .footerP__contenedorA__redesSociales {
+      font-family: "Roboto" sans-serif;
+      color: white;
+      font-size: 15px;
+      text-align: left;
+      margin: 15px 30px 0px 20px;
+      display: inline; }
+    .footerP__contenedorA__iconos {
+      color: #4a56ff;
+      font-size: 25px;
+      padding-left: 10px;
+      transition: all 0.5s; }
+      .footerP__contenedorA__iconos :hover {
+        transform: scale(1.5, 1.5);
+        color: white; }
+  .footerP__contenedorB {
+    width: 50%;
+    padding-right: 10px; }
+    .footerP__contenedorB__creditos {
+      height: 40px;
+      font-family: "Roboto" sans-serif;
+      color: white;
+      font-size: 12px;
+      text-align: right;
+      padding: 5px; }
+
+#cartaPrin {
+  width: 80%;
+  max-width: 1200px;
+  margin: 15px auto; }
+  #cartaPrin #cartasTam {
+    width: 60%;
+    height: 60%; }
+
+/* ESTILO DE GRID SOBRE MI - EXTEND*/
+.contenedorS {
+  width: 95%;
+  max-width: 1200px;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  margin: 15px auto;
+  grid-template-areas: "una una" "dos tres"; }
+  .contenedorS__element {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-area: una; }
+  .contenedorS__elementB, .contenedorS__elementC {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-area: dos; }
+  .contenedorS__elementC {
+    grid-area: tres; }
+
+.contenedorM {
+  width: 95%;
+  max-width: 1200px;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  margin: 15px auto;
+  grid-template-areas: "cuatro cinco" "seis siete"; }
+  .contenedorM__elementB {
+    width: 400px;
+    display: flex;
+    grid-area: cuatro; }
+    .contenedorM__elementB_img {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      align-self: stretch; }
+  .contenedorM__elementC {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-area: cinco; }
+  .contenedorM__elementD {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-area: seis; }
+  .contenedorM__elementE {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-area: siete; }
+
+/* ESTILO DE MAIN SASS+BEM*/
+.seccionP {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  padding-top: 30px; }
+  .seccionP__card__img__1 {
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 500px;
+    background-image: url(../images/BannerRelativityIdeas.png); }
+  .seccionP__card__img__2 {
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 500px;
+    background-image: url(../images/BannerRelativityContacto.png); }
+
+/* ESTILO DE GALERIA SASS+BEM*/
+.galeria {
+  display: grid;
+  align-content: center;
+  justify-self: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 300px;
+  padding: 5px;
+  column-gap: 5px;
+  row-gap: 5px; }
+  .galeria__item {
+    position: relative; }
+    .galeria__item__imagen {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+    .galeria__item__titulo {
+      position: absolute;
+      bottom: 0;
+      color: white;
+      background: linear-gradient(rgba(255, 255, 255, 0.1), black);
+      width: 100%;
+      margin: 0;
+      padding: 10px;
+      font-size: 14px; }
+
+/* ESTILO DE MAIN SUPERIOR */
+#bannerContenedor {
+  height: fit-content;
+  position: relative;
+  height: fit-content;
+  z-index: 2; }
+  #bannerContenedor #tituloIn {
+    position: absolute;
+    top: 30%;
+    left: 60%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: black;
+    text-align: right;
+    justify-content: right;
+    text-shadow: 4px 4px 8px white;
+    letter-spacing: -2px;
+    padding-right: 5%; }
+  #bannerContenedor .textoPrincipal {
+    font-family: "Roboto" sans-serif;
+    color: #49008d;
+    text-align: justify; }
+
+/* ESTILO DE TITULOS SASS+BEM*/
+.tctext__h2 {
+  font-style: oblique;
+  font-size: 35px;
+  font-weight: bolder;
+  color: black;
+  letter-spacing: -1.5px;
+  padding: 2% 2% 0% 4%;
+  text-align: left;
+  justify-content: center; }
+
+.tctext__h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: oblique;
+  font-size: 20px;
+  color: black;
+  letter-spacing: -1.5px;
+  padding: 1% 2% 1% 4%;
+  text-align: left;
+  justify-content: center; }
+
+h1 {
+  font-size: 40px;
+  color: black;
+  font-style: oblique;
+  font-weight: bolder;
+  letter-spacing: -1.5px;
+  padding: 2% 2% 2% 4%;
+  text-align: left;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif; }
+
+p {
+  font-size: none;
+  color: #0a0030;
+  font-style: none;
+  font-weight: none;
+  letter-spacing: none;
+  padding: 2% 2% 2% 4%;
+  text-align: none;
+  justify-content: none;
+  font-family: "Roboto" sans-serif; }
+
+/* BOTON WSP SASS+BEM */
+.wsp {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  bottom: 100px;
+  right: 30px;
+  background: #ffffff;
+  color: #49008d;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 55px; }
+  .wsp:hover {
+    text-align: center;
+    background: #49008d;
+    color: white; }
+
+/* ESTILO DE FORMULARIOS SASS+BEM*/
+.formularioC {
+  font-family: Arial, Helvetica, sans-serif; }
+  .formularioC__fieldset__input {
+    margin: 10px;
+    width: 70%;
+    height: 20px;
+    border-style: none none solid;
+    border-width: 1px 1px 1px;
+    border-color: #000 #000 rgba(143, 0, 179, 0.65);
+    border-radius: 0;
+    background-color: transparent;
+    color: black;
+    font-size: 12px;
+    line-height: 20px; }
+  .formularioC__fieldset__label, .formularioC__fieldset__legend {
+    font-style: oblique;
+    font-size: 20px;
+    color: black;
+    letter-spacing: -1.5px;
+    padding: 1% 2% 1% 4%;
+    text-align: left;
+    justify-content: center; }
+  .formularioC__fieldset__input {
+    width: auto;
+    height: 2rem;
+    font-size: 16px; }
+  .formularioC__fieldset--cuadro {
+    font-style: oblique;
+    font-size: 20px;
+    color: black;
+    letter-spacing: -1.5px;
+    margin: 0% 3% 1% 3%;
+    text-align: left;
+    justify-content: center; }
+  .formularioC__fieldset__div {
+    padding: 1% 2% 1% 4%; }
+    .formularioC__fieldset__div select {
+      font-style: oblique;
+      font-size: 20px;
+      color: black;
+      letter-spacing: -1.5px;
+      margin: 0% 3% 1% 4%;
+      text-align: left;
+      justify-content: center; }
+  .formularioC__labelExt {
+    font-style: oblique;
+    font-size: 20px;
+    color: black;
+    letter-spacing: -1.5px;
+    padding: 2% 2% 2% 4%;
+    margin: 0% 3% 1% 3%;
+    text-align: left;
+    justify-content: center; }
+  .formularioC__textarea {
+    margin: 10px;
+    width: 70%;
+    height: 20px;
+    border-style: none none solid;
+    border-width: 1px 1px 1px;
+    border-color: #000 #000 rgba(143, 0, 179, 0.65);
+    border-radius: 0;
+    background-color: transparent;
+    color: black;
+    font-size: 12px;
+    line-height: 20px; }
+  .formularioC__check {
+    font-style: oblique;
+    font-size: 20px;
+    color: black;
+    letter-spacing: -1.5px;
+    margin: 0% 3% 1% 3%;
+    text-align: left;
+    justify-content: center; }
+  .formularioC__botone {
+    font-family: "MuseoModerno", cursive;
+    font-style: oblique;
+    font-size: 16px;
+    color: white;
+    background-color: #8f00b3;
+    border-radius: 6px;
+    border: black;
+    letter-spacing: -1.0px;
+    padding: 0% 2% 0% 2%;
+    margin: 0% 4% 2% 4%;
+    text-align: left;
+    justify-content: center;
+    transition: all 0.5s; }
+    .formularioC__botone:hover {
+      color: white;
+      background-color: #5e0059; }
+
+::placeholder {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: oblique;
+  font-size: 14px;
+  color: #919191;
+  margin: 0% 0% 0% 4%;
+  text-align: left;
+  justify-content: center; }
+
+@media only screen and (max-width: 800px) {
+  .contenedorS {
+    grid-template-areas: "una una" "dos dos" "tres tres"; }
+  .contenedorM {
+    grid-template-areas: "cuatro" "cinco" "seis" "siete"; } }
+
+@media only screen and (min-width: 600px) {
+  #navegadorIzq {
+    padding-left: 7%; }
+  a {
+    font-size: 14px; }
+  .searchA {
+    font-size: 14px; }
+  .iconos {
+    font-size: 20px; }
+  input {
+    margin: 3px; }
+  nav {
+    padding-top: 5px; }
+  .redesSociales {
+    font-size: 12px;
+    margin: 15px 2px 0px 2px; }
+  .tituloIn {
+    font-size: 40px; }
+  h2 {
+    font-size: 32px; }
+  h3 {
+    font-size: 18px; }
+  .principal {
+    grid-template-columns: repeat(2, 50%); }
+  .searchA:hover {
+    transform: scale(1.2, 1.2);
+    color: white; } }
+
+@media only screen and (min-width: 900px) {
+  #navegadorIzq {
+    padding-left: 20%; }
+  a {
+    font-size: 16px; }
+  .searchA {
+    font-size: 16px; }
+  .iconos {
+    font-size: 22px; }
+  input {
+    margin: 10px; }
+  .redesSociales {
+    font-size: 15px;
+    margin: 15px 30px 0px 20px; }
+  .tituloIn {
+    font-size: 60px; }
+  h2 {
+    font-size: 35px; }
+  h3 {
+    font-size: 20px; }
+  .principal {
+    grid-template-columns: 40% 30% 30%; }
+  .searchA:hover {
+    transform: scale(1.5, 1.5);
+    color: white; } }

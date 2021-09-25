@@ -1,0 +1,127 @@
+/* HOJA DE ESTILOS COMUNES */
+/* ATAJO COMENTARIO CONTROL CTRL+K+C */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* VARIABLES PRINCIPALES */
+$BackgroundPrincipal: #212529;
+$BackgroundSecundario: white;
+$ColorPrincipal: rgb(143, 0, 179);
+$ColorTextoDark: black;
+$ColorTextoLight: white;
+$FuentePrincipal: 'MuseoModerno', cursive;
+$FuenteSecundaria: Arial, Helvetica, sans-serif;
+$FuenteFooter: 'Roboto' sans-serif;
+
+/* ESTILO DE HEADER */
+#logoContenedor {
+    display: flex;
+    height: 90px;
+    justify-content: center;
+    margin-top: 2px;
+    background-color: $BackgroundPrincipal;
+ }
+
+#busqueda{
+    font-family: $FuentePrincipal;
+    width: 70%;
+    height: 20px;
+    border-style: none none solid;
+    border-width: 1px 1px 1px;
+    border-color: #000 #000 rgba(143, 0, 179, 0.65);
+    border-radius: 0;
+    background-color: transparent;
+    color: #fff;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+/* NAVEGADOR */
+
+ul {
+    font-family: $FuentePrincipal;
+    align-items: center;
+}
+
+li:hover{
+    transform: scale(1.1,1.1);
+}
+
+a{
+    text-decoration: none;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+a:hover{
+    color: blueviolet;
+}
+
+/* ESTILOS DE ICONOS */
+
+.searchA{
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.searchA:hover{
+    transform: scale(1.5,1.5);
+    color: rgb(255, 255, 255);
+}
+
+
+ /* ESTILO DE FOOTER SASS+BEM*/
+.footerP{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background: #212529;
+
+    &__contenedorA{
+        width: 50%;
+        
+        &__redesSociales{
+            font-family: $FuenteFooter;
+            color: rgb(255, 255, 255);
+            font-size: 15px;
+            text-align: left;
+            margin: 15px 30px 0px 20px;
+            display: inline;
+            }
+        
+        &__iconos{
+            color: rgb(74, 86, 255);
+            font-size: 25px;
+            padding-left: 10px;
+            transition: all 0.5s;
+
+            :hover{
+                transform: scale(1.5,1.5);
+                color: white;
+                }   
+        }
+    }
+
+    &__contenedorB{
+        width: 50%;
+        padding-right: 10px;
+        
+        &__creditos{
+            height: 40px;
+            font-family: $FuenteFooter;
+            color: rgb(255, 255, 255);
+            font-size: 12px;
+            text-align: right;
+            padding: 5px;
+        }
+    }
+}
+
+@import "general.scss";
+@import "mediaquery.scss";
