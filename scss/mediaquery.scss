@@ -11,6 +11,48 @@
         grid-template-areas: "cuatro" "cinco"
                             "seis" "siete";
     }
+    #tituloIn{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 800px) 
+{
+    #navegadorIzq{
+        padding-left: 20%; 
+    }
+    a{
+        font-size: 16px;
+    }
+    .searchA{
+        font-size: 16px;
+    }
+    .iconos{
+        font-size: 22px;
+    }
+    input{
+        margin: 10px;
+    }
+    .redesSociales {
+        font-size: 15px;
+        margin: 15px 30px 0px 20px;
+    }
+    #tituloIn{
+        font-size: 60px;
+    }
+    h2{
+        font-size: 35px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    .principal{
+        grid-template-columns: 40% 30% 30%;
+    }
+    .searchA:hover{
+        transform: scale(1.5,1.5);
+        color: rgb(255, 255, 255);
+    }
 }
 
 @media only screen and (min-width: 600px) 
@@ -37,8 +79,8 @@ nav{
     font-size: 12px;
     margin: 15px 2px 0px 2px;
 }
-.tituloIn{
-    font-size: 40px;
+#tituloIn{
+    font-size: 20px;
 }
 h2{
     font-size: 32px;
@@ -53,43 +95,4 @@ h3{
     transform: scale(1.2,1.2);
     color: rgb(255, 255, 255);
 }
-}
-
-@media only screen and (min-width: 900px) 
-{
-    #navegadorIzq{
-        padding-left: 20%; 
-    }
-    a{
-        font-size: 16px;
-    }
-    .searchA{
-        font-size: 16px;
-    }
-    .iconos{
-        font-size: 22px;
-    }
-    input{
-        margin: 10px;
-    }
-    .redesSociales {
-        font-size: 15px;
-        margin: 15px 30px 0px 20px;
-    }
-    .tituloIn{
-        font-size: 60px;
-    }
-    h2{
-        font-size: 35px;
-    }
-    h3{
-        font-size: 20px;
-    }
-    .principal{
-        grid-template-columns: 40% 30% 30%;
-    }
-    .searchA:hover{
-        transform: scale(1.5,1.5);
-        color: rgb(255, 255, 255);
-    }
 }
